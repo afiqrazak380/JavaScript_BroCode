@@ -36,6 +36,33 @@
 // console.log(extraColors); // ["white", "black"]
 
 //  === EXTRACT VALUE FORM OBJECT ===
+// const person1 = {
+//   firstName: "Spongebob",
+//   lastName: "Squarepants",
+//   age: 30,
+//   job: "Fry Cook",
+// };
+
+// const person2 = {
+//   firstName: "Patric",
+//   lastName: "Star",
+//   age: 34,
+// };
+
+// const { firstName, lastName, age, job = "jobless" } = person1; // "jobless" is the default value if the value is not available in the object
+
+// console.log(firstName);
+// console.log(lastName);
+// console.log(age);
+// console.log(job);
+
+// === DESTRUCTURING IN FUNCTION PARAMETERS ===
+
+function displayMe({ firstName, lastName, age, job = "Unemployed" }) {
+  // "Unemployed" is the default value
+  console.log(`My name is ${firstName} ${lastName},`);
+  console.log(`I am ${age} and working as ${job}`);
+}
 
 const person1 = {
   firstName: "Spongebob",
@@ -50,9 +77,5 @@ const person2 = {
   age: 34,
 };
 
-const { firstName, lastName, age, job } = person1;
-
-console.log(firstName);
-console.log(lastName);
-console.log(age);
-console.log(job);
+displayMe(person1); // My name is Spongebob Squarepants
+// I am 30 and working as Fry Cook
